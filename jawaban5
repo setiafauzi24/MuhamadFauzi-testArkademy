@@ -1,0 +1,20 @@
+function randomize(paramInput){
+  
+  let array = []
+  let sum = 0;
+
+  for (let i=0; i<paramInput; i++){
+  let x = Math.floor((Math.random() * 10) + 1);
+  let mod = x % 2;
+  if(mod ==0){
+    if(x==10){x-=1}
+    else{x+=1}
+    }
+  array.push(x)
+  sum+=x
+ }
+console.log('array ',array)
+console.log('sum ', sum)
+}
+
+randomize(5)
